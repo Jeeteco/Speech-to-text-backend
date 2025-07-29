@@ -9,7 +9,7 @@ const uploadAudio = async (req, res) => {
     try {
         const audio = new Audio({
             filename: req.file.filename,
-            // originalname:req.file.originalname,
+          
             path: req.file.path,
             mimetype:req.file.mimetype
         });

@@ -28,10 +28,10 @@ const mongoose =require('mongoose');
 // });
 const audioSchema = new mongoose.Schema({
   filename: String,
-  // originalname:String,
+ 
   path: String,
   mimetype: String,
-  // transcription: String,
+
   uploadedAt: {
     type: Date,
     default: Date.now
