@@ -11,10 +11,7 @@ const { error } = require('console');
 const router = express.Router();
 
 
-// router.post('/test', async(req, res) => {
-//   console.log("BODY RECEIVED:", req.body);
-//   res.json({ received: req.body });
-// });
+
 
 
 router.post('/transcribe', async (req, res) => {
@@ -31,15 +28,15 @@ router.post('/transcribe', async (req, res) => {
       return res.status(400).json({ error: "Audio not found" });
     }
 
-    if (!audio.path) {
-      return res.status(400).json({ error: "Audio path is misiing in the database" });
-    }
+    // if (!audio.Id) {
+    //   return res.status(400).json({ error: "Audio path is misiing in the database" });
+    // }
 
-    const audioPath = path.join(__dirname, "../", audio.path);
+    // const audioPath = path.join(__dirname, "../", audio.path);
 
-    const audioData = fs.readFileSync(audioPath);
+    // const audioData = fs.readFileSync(audioPath);
 
-    console.log("Audio file size:", audioData.length);
+    // console.log("Audio file size:", audioData.length);
    
     // console.log('Audio document from DB:', audio);
    
