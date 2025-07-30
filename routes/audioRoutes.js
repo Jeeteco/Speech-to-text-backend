@@ -11,9 +11,6 @@ const {
 
 router.post('/upload' ,upload.single('audio'),uploadAudio);
 
-// router.get("/j", async(req,res)=>{
-//  return res.status(200).json({message:"We are here"});
-// });
 
 router.get('/audios',getAllAudios);
 

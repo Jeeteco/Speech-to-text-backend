@@ -28,13 +28,13 @@ router.post('/transcribe', async (req, res) => {
       return res.status(400).json({ error: "Audio not found" });
     }
 
-    // if (!audio.Id) {
-    //   return res.status(400).json({ error: "Audio path is misiing in the database" });
-    // }
+    if (!audioId) {
+      return res.status(400).json({ error: "Audio path is misiing in the database" });
+    }
 
-    // const audioPath = path.join(__dirname, "../", audio.path);
+    const audioPath = path.join(__dirname, "../", audio.path);
 
-    // const audioData = fs.readFileSync(audioPath);
+    const audioData = fs.readFileSync(audioPath);
 
     // console.log("Audio file size:", audioData.length);
    
