@@ -3,6 +3,7 @@ dotenv.config();
 
 
 const express=require('express');
+const cors= require('cors');
 
 const connectDB=require('./config/db');
 
@@ -12,7 +13,7 @@ const transcribeRoute=require('./routes/transcribeRoute')
 
 const path=require('path') 
 
-const cors= require('cors');
+
 
 
 
@@ -26,7 +27,7 @@ connectDB();
 app.use(cors({
   origin: [
     'http://localhost:5173', 
-    'https://speech-to-text-y2k1-qa59kjiyq-jeetecos-projects.vercel.app'
+    'https://speech-to-text-y2k1.vercel.app'
   ],
   methods: ['GET', 'POST'],
   credentials: true
