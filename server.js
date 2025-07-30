@@ -23,7 +23,11 @@ const app = express();
 connectDB();
 
 //Middelware
-app.use(cors());
+app.use(cors({
+  origin: ['https://speech-to-text-y2k1-qa59kjiyq-jeetecos-projects.vercel.app', 'http://localhost:5173'] , // Your frontend URL
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 
 app.use(express.json());
 
