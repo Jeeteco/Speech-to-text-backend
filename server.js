@@ -24,11 +24,13 @@ connectDB();
 
 //Middelware
 app.use(cors({
-  origin: ['https://speech-to-text-y2k1-qa59kjiyq-jeetecos-projects.vercel.app', 'http://localhost:5173'] , // Your frontend URL
+  origin: [
+    'http://localhost:5173', 
+    'https://speech-to-text-y2k1-qa59kjiyq-jeetecos-projects.vercel.app'
+  ],
   methods: ['GET', 'POST'],
   credentials: true
 }));
-
 app.use(express.json());
 
 app.use('/uploads', express.static(path.join(__dirname, "uploads")));
