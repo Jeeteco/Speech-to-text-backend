@@ -27,7 +27,7 @@ connectDB();
 app.use(cors({
   origin: [
     'http://localhost:5173', 
-    'https://speech-to-text-y2k1.vercel.app'
+    'https://speech-to-text-navy.vercel.app'
   ],
   methods: ['GET', 'POST'],
   credentials: true
